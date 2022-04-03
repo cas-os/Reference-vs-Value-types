@@ -23,11 +23,25 @@ class MyReferenceType {
     }
 }
 
+func extraCreditValueType(val: MyValueType, extraCredit: Int) {
+    var val = val
+    val.grade += extraCredit
+}
 
-var val = MyValueType(name: "Jon", assignment: "Math test 1", grade: 92)
-var ref = MyReferenceType(name: "Jon", assignment: "Math test 1", grade: 91)
+func extraCreditReferenceType(ref: MyReferenceType, extraCredit: Int) {
+    ref.grade += extraCredit
+}
+
+var val = MyValueType(name: "Jon", assignment: "Math test 1", grade: 90)
+var ref = MyReferenceType(name: "Ron", assignment: "Chem test 1", grade: 90)
 
 print(val.name, val.assignment, val.grade)
+print(ref.name, ref.assignment, ref.grade)
+
+extraCreditValueType(val: val, extraCredit: 5)
+print(val.name, val.assignment, val.grade)
+
+extraCreditReferenceType(ref: ref, extraCredit: 2)
 print(ref.name, ref.assignment, ref.grade)
 
 
