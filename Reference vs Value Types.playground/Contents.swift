@@ -10,7 +10,7 @@ struct MyValueType {
 }
 
 func extraCreditValueType(val: MyValueType, extraCredit: Int) {
-    var val = val // must be ! otherwise there will be an error : Left side of mutating operator isn't mutable: 'val' is a 'let' constant
+    var val = val // must be !!! otherwise there will be an error : Left side of mutating operator isn't mutable: 'val' is a 'let' constant
     val.grade += extraCredit
     print(val)
 }
